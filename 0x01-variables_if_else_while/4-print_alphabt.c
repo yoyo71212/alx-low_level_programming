@@ -12,7 +12,7 @@ int main(void)
 
 	for (i = 97; i < 123; i++)
 	{
-		if (i != 'q' || i != 'e')
+		if (i != 'q' && i != 'e')
 		{
 			putchar(i);
 		}
