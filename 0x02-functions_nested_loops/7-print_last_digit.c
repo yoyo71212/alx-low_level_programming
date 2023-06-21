@@ -16,6 +16,6 @@ int print_last_digit(int n)
 		n1 = n * -1;
 	}
 	n1 = n;
-	printf("%d", n);
+	printf("%d", n1 % 10);
 	return (n1 % 10);
 }
