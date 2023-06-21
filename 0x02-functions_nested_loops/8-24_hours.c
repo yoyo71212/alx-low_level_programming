@@ -15,18 +15,18 @@ void jack_bauer(void)
 
 		for (j = 0; j < 60; j++)
 		{
+			int temp;
+
 			if (i < 10)
 			{
 				_putchar('0');
 			}
 			else
 			{
-				int temp = i / 10;
+				temp = i / 10;
 
 				_putchar(temp);
 			}
-			int temp;
-
 			temp = i % 10;
 			_putchar(temp);
 			_putchar(':');
@@ -36,7 +36,7 @@ void jack_bauer(void)
 			}
 			else
 			{
-				int temp = j / 10;
+				temp = j / 10;
 
 				_putchar(temp);
 			}
