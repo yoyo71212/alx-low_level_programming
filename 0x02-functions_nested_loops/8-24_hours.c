@@ -24,8 +24,7 @@ void jack_bauer(void)
 			else
 			{
 				temp = i / 10;
-
-				_putchar(temp);
+				_putchar(temp + 48);
 			}
 			temp = i % 10;
 			_putchar(temp);
@@ -37,11 +36,10 @@ void jack_bauer(void)
 			else
 			{
 				temp = j / 10;
-
-				_putchar(temp);
+				_putchar(temp + 48);
 			}
 			temp = j % 10;
-			_putchar(temp);
+			_putchar(temp + 48);
 			_putchar('\n');
 		}
 	}
