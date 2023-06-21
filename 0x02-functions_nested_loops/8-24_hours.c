@@ -21,9 +21,14 @@ void jack_bauer(void)
 			}
 			else
 			{
-				_putchar(i / 10);
+				int temp = i / 10;
+
+				_putchar(temp);
 			}
-			_putchar(i % 10);
+			int temp;
+
+			temp = i % 10;
+			_putchar(temp);
 			_putchar(':');
 			if (j < 10)
 			{
@@ -31,9 +36,12 @@ void jack_bauer(void)
 			}
 			else
 			{
-				_putchar(j / 10);
+				int temp = j / 10;
+
+				_putchar(temp);
 			}
-			_putchar(j % 10);
+			temp = j % 10;
+			_putchar(temp);
 			_putchar('\n');
 		}
 	}
