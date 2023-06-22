@@ -4,14 +4,31 @@
 void print_to_98(int n)
 {
 	int i;
-
-	for (i = n; i < 99; i++)
+	
+	if (n <= 98)
 	{
-		_putchar(i + 48);
-		if (i < 98)
+		for (i = n; i < 99; i++)
 		{
-			_putchar(',');
-			_putchar(' ');
+			_putchar(i + 48);
+			if (i < 98)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
 		}
+		_putchar('\n');
+	}
+	else
+	{
+		for (i = n; i > 97; i--)
+		{
+			_putchar(i + 48);
+			if (i > 98)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
+		}
+		_putchar('\n');
 	}
 }
