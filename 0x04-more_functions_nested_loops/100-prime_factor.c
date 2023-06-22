@@ -34,7 +34,10 @@ int isPrime(int num)
  */
 int main(void)
 {
-	int num, i, max;
+	long num;
+	int i, max;
+
+	max = 1;
 
 	num = 612852475143;
 
@@ -43,9 +46,10 @@ int main(void)
 		if (num % i == 0 && isPrime(i))
 		{
 			max = i;
+			num = num / i;
 		}
 	}
 
-	printf("%d", max);
+	printf("%d\n", max);
 	return (0);
 }
