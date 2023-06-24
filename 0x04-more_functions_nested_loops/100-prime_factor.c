@@ -14,7 +14,7 @@ int isPrime(int num)
 	{
 		return (0);
 	}
-	
+
 	for (i = 2; i * i < num; i++)
 	{
 		if (num % i == 0 && i != num)
@@ -47,5 +47,5 @@ int main(void)
 	}
 
 	printf("%d\n", max);
-	return 0;
+	return (0);
 }
