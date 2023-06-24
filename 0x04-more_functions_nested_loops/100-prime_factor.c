@@ -8,19 +8,19 @@
  */
 int isPrime(int num)
 {
-        if (num <= 1)
-        {
-                return (0);
-        }
+	int i;
+
+	if (num <= 1)
+	{
+		return (0);
+	}
 	
-        int i;
-	
-        for (i = 2; i * i < num; i++)
-        {
-                if (num % i == 0 && i != num)
-                {
-                        return (0);
-                }
+	for (i = 2; i * i < num; i++)
+	{
+		if (num % i == 0 && i != num)
+		{
+			return (0);
+		}
 	}
 	return (1);
 }
@@ -35,17 +35,17 @@ int isPrime(int num)
 int main(void)
 {
 	long num = 612852475143;
-    	int i, max;
+	int i, max;
 
-    	for (i = 2; i <= num; i++)
-    	{
-        	if (num % i == 0 && isPrime(i))
-        	{
-            	max = i;
-            	num /= i;
-        	}
-    	}
+	for (i = 2; i <= num; i++)
+	{
+		if (num % i == 0 && isPrime(i))
+		{
+			max = i;
+			num /= i;
+		}
+	}
 
-    	printf("%d\n", max);
-    	return 0;
+	printf("%d\n", max);
+	return 0;
 }
