@@ -22,5 +22,7 @@ void rev_string(char *s)
 		temp = *s;
 		*s = *end;
 		*end = temp;
+		s++;
+		end--;
 	}
 }
