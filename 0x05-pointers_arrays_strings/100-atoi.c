@@ -1,5 +1,6 @@
 #include "main.h"
 #include <string.h>
+#include <ctype.h>
 /**
  * _atoi - Convert a string to an integer
  *
@@ -23,7 +24,12 @@ int _atoi(char *s)
 		sign = 1;
 	}
 
-	while (*s != '\0')
+	while (*s != '\0' && !(isdigit(*s)))
+	{
+		s++;
+	}
+
+	while (*s != '\0' && isdigit(*s))
 	{
 		num = num * 10 + (*s - '0');
 		s++;
