@@ -9,7 +9,7 @@
  */
 int _atoi(char *s)
 {
-	int sign, power, num;
+	int sign, num;
 
 	num = 0;
 
@@ -17,7 +17,6 @@ int _atoi(char *s)
 	{
 		sign = -1;
 		s++;
-		power--;
 	}
 	else
 	{
