@@ -10,7 +10,9 @@
  */
 int _atoi(char *s)
 {
-	int sign, num;
+	int sign, num, temp;
+
+	temp = s;
 
 	num = 0;
 
@@ -18,7 +20,11 @@ int _atoi(char *s)
 	{
 		s++;
 	}
-	s--;
+
+	if (s > temp)
+	{
+		s--;
+	}
 
 	if (*s == '-')
         {
