@@ -8,7 +8,7 @@
  *
  * Return: num ^ power
  */
-int pow(int num, int power)
+int _pow(int num, int power)
 {
 	while (power > -1)
 	{
@@ -45,7 +45,7 @@ int _atoi(char *s)
 
 	while (*s != '\0')
 	{
-		num += (*s * (pow(10, power)));
+		num += (*s * (_pow(10, power)));
 		power--;
 	}
 	return (sign * num);
