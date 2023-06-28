@@ -41,22 +41,6 @@ int _atoi(char *s)
 		s++;
 	}
 
-	if ((temp + 1 < s) && (string == 1))
-	{
-		s--;
-		temp = s - 1;
-	}
-
-	if (*s == ' ' && (*temp == ' ' || *temp == '-'))
-	{
-		sign = -1;
-	}
-	else
-	{
-		sign = 1;
-	}
-	s++;
-
 	while (*s != '\0' && isdigit(*s))
 	{
 		num = num * 10 + (*s - '0');
