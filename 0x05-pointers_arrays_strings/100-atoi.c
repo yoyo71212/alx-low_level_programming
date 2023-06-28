@@ -22,7 +22,6 @@ int _atoi(char *s)
 	else
 	{
 		sign = 1;
-		s++;
 	}
 
 	while (*s != '\0' && !(isdigit(*s)))
