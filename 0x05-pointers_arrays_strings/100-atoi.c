@@ -16,12 +16,23 @@ int _atoi(char *s)
 
 	num = 0;
 
+	if (*s == '-')
+	{
+		sign = -1;
+		s++;
+	}
+	else
+	{
+		sign = 1;
+		s++;
+	}
+
 	while (*s != '\0' && !(isdigit(*s)))
 	{
 		s++;
 	}
 
-	if (temp < s)
+	if (temp + 1 < s)
 	{
 		s--;
 		temp = s - 1;
