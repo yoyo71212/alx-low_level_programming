@@ -1,24 +1,6 @@
 #include "main.h"
 #include <string.h>
 /**
- * pow - Returns num ^power
- *
- * @num: The number
- * @power: The power
- *
- * Return: num ^ power
- */
-int _pow(int num, int power)
-{
-	while (power > -1)
-	{
-		num *= num;
-		power--;
-	}
-
-	return (num);
-}
-/**
  * _atoi - Convert a string to an integer
  *
  * @s: The pointer to the first character in the string
@@ -29,7 +11,6 @@ int _atoi(char *s)
 {
 	int sign, power, num;
 
-	power = strlen(s);
 	num = 0;
 
 	if (*s == '-')
@@ -45,8 +26,8 @@ int _atoi(char *s)
 
 	while (*s != '\0')
 	{
-		num += (*s * (_pow(10, power)));
-		power--;
+		num = num * 10 + (*s - '0');
+		s++;
 	}
 	return (sign * num);
 }
