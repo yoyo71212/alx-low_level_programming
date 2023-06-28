@@ -10,6 +10,8 @@
  */
 int _atoi(char *s)
 {
+	char *temp = s;
+
 	int sign, num;
 
 	num = 0;
@@ -26,6 +28,22 @@ int _atoi(char *s)
 
 	while (*s != '\0' && !(isdigit(*s)))
 	{
+		s++;
+	}
+
+	if (temp > s)
+	{
+		s--;
+	}
+
+	if (*s == ' ' || *s == '-')
+	{
+		sign = -1;
+		s++;
+	}
+	else
+	{
+		sign = 1;
 		s++;
 	}
 
