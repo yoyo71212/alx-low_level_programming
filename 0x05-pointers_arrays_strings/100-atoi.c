@@ -31,20 +31,18 @@ int _atoi(char *s)
 		s++;
 	}
 
-	if (temp > s)
+	if (temp < s)
 	{
-		s--;
+		temp = s - 1;
 	}
 
-	if (*s == ' ' || *s == '-')
+	if (*temp == ' ' || *temp == '-')
 	{
 		sign = -1;
-		s++;
 	}
 	else
 	{
 		sign = 1;
-		s++;
 	}
 
 	while (*s != '\0' && isdigit(*s))
