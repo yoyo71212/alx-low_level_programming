@@ -15,14 +15,14 @@ int _atoi(char *s)
 	num = 0;
 
 	if (*s == '-')
-        {
-                sign = -1;
-                s++;
-        }
-        else
-        {
-                sign = 1;
-        }
+	{
+		sign = -1;
+		s++;
+	}
+	else
+	{
+		sign = 1;
+	}
 
 	while (*s != '\0' && !(isdigit(*s)))
 	{
