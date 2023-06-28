@@ -29,9 +29,8 @@ void puts_half(char *str)
 		start++;
 		temp--;
 	}
-	start--;
 
-	for (temp = n; temp >= 0; temp--)
+	for (temp = n; temp >= 0 && *start != '\0'; temp--)
 	{
 		_putchar(*start);
 		start++;
