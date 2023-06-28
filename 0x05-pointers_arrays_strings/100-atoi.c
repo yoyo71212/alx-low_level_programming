@@ -41,7 +41,7 @@ int _atoi(char *s)
 		s++;
 	}
 
-	if (temp + 1 < s && string == 1)
+	if ((temp + 1 < s) && (string == 1))
 	{
 		s--;
 		temp = s - 1;
