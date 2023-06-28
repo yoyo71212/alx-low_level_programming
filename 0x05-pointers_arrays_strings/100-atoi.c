@@ -12,7 +12,7 @@ int _atoi(char *s)
 {
 	char *temp = s;
 
-	int sign, num;
+	int sign, num, string;
 
 	num = 0;
 
@@ -27,12 +27,21 @@ int _atoi(char *s)
 		s++;
 	}
 
-	while (*s != '\0' && !(isdigit(*s)))
+	if (*s != '\0' && isdigit(*s))
+	{
+		string = 0;
+	}
+	else
+	{
+		string = 1;
+	}
+
+	while (*s != '\0' && !(isdigit(*s)) && string == 1)
 	{
 		s++;
 	}
 
-	if (temp + 1 < s)
+	if (temp + 1 < s && string == 1)
 	{
 		s--;
 		temp = s - 1;
