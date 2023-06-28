@@ -43,8 +43,8 @@ int _atoi(char *s)
 	if (string == 1)
 	{
 		s--;
-		char *temp = s - 1;
-		if ((*s == ' ' || *s == '-') && temp != ' ')
+		temp = s - 1;
+		if ((*s == ' ' || *s == '-') && *temp != ' ')
 		{
 			sign = -1;
 		}
