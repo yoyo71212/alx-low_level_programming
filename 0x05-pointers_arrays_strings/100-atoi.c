@@ -25,7 +25,7 @@ int _atoi(char *s)
 		s++;
 	}
 
-	while (*s != '\0' && !(isdigit(*s)) && string == 1)
+	while (*s != '\0' && !(isdigit(*s)))
 	{
 		s++;
 	}
