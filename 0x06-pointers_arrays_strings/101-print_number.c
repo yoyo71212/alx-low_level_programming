@@ -8,8 +8,8 @@
  */
 void print_number(int n)
 {
-	int i, j, temp, numOfDigits, power;
-
+	int temp;
+	
 	if (n == 0)
 	{
 		_putchar('0');
@@ -22,22 +22,9 @@ void print_number(int n)
 	}
 
 	temp = n;
-	numOfDigits = 0;
-	while (temp > 0)
+	while (temp / 10 != 0)
 	{
-		temp /= 10;
-		numOfDigits++;
+		_putchar(temp / 10);
 	}
-
-	temp = n;
-	for (i = numOfDigits - 1; i > -1; i--)
-	{
-		power = 1;
-		for (j = 0; j < i; j++)
-		{
-			power *= 10;
-		}
-		_putchar((temp / power) + 48);
-		temp %= power;
-	}
+	_putchar((temp % 10) + 48);
 }
