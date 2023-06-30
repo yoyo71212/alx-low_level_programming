@@ -9,35 +9,22 @@
  */
 char *leet(char *s)
 {
-	char c;
+	int c, n;
 
-	char *temp = s;
+	char *chars = "aAeEoOtTlL";
 
-	while (*s)
+	char *nums = "4433007711";
+
+	for (c = 0; s[c] != '\0'; c++)
 	{
-		c = tolower(*s);
-
-		if (c == 'a')
+		for (n = 0; n < 10; n++)
 		{
-			*s = '4';
+			if (chars[n] == s[c])
+			{
+				*(s + c) = nums[n];
+			}
 		}
-		else if (c == 'e')
-		{
-			*s = '3';
-		}
-		else if (c == 'o')
-		{
-			*s = '0';
-		}
-		else if (c == 't')
-		{
-			*s = '7';
-		}
-		else if (c == 'l')
-		{
-			*s = '1';
-		}
-		s++;
 	}
-	return (temp);
+
+	return (s);
 }
