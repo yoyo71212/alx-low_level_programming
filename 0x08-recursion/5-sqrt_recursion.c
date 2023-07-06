@@ -9,11 +9,6 @@
  */
 int _sqrtHelper(int n, int g)
 {
-	if (start > end)
-	{
-		return (-1);
-	}
-
 	if (g * g == n)
 	{
 		return (g);
