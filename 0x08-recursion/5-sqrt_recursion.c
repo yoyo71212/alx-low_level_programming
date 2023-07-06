@@ -19,7 +19,7 @@ int _sqrtHelper(int n, int g)
 	}
 	else
 	{
-		return (_sqrtHelper(n, (g + ((n / g)) / 2)));
+		return (_sqrtHelper(n, (g + n / g) / 2));
 	}
 }
 
