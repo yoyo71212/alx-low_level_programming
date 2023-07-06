@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 /**
  * palindromeHelper - Checks if string is a palindrome
  *
@@ -36,10 +37,7 @@ int is_palindrome(char *s)
 {
 	int c;
 
-	for (c = 0; s[c] != '\0'; c++)
-	{
-	}
-
+	c = strlen(s);
 	if (c < 2)
 	{
 		return (1);
