@@ -3,32 +3,28 @@
  * _sqrtHelper - Returns the natural square root of a number
  *
  * @n: The number
- * @start: The starting value
- * @end: The ending value
+ * @g: The guess
  *
  * Return: Returns the natural square root of a number if exists, -1 otherwise
  */
-int _sqrtHelper(int n, int start, int end)
+int _sqrtHelper(int n, int g)
 {
-	int mid;
-
 	if (start > end)
 	{
 		return (-1);
 	}
 
-	mid = (start + end) / 2;
-	if (mid * mid == n)
+	if (g * g == n)
 	{
-		return (mid);
+		return (g);
 	}
-	else if (mid * mid < n)
+	else if (g * g >  n)
 	{
-		return (_sqrtHelper(n, mid + 1, end));
+		return (-1);
 	}
 	else
 	{
-		return (_sqrtHelper(n, start, mid - 1));
+		return (_sqrtHelper(n, (g + ((n / g)) / 2)));
 	}
 }
 
@@ -46,5 +42,5 @@ int _sqrt_recursion(int n)
 		return (-1);
 	}
 
-	return (_sqrtHelper(n, 0, n));
+	return (_sqrtHelper(n, 1));
 }
