@@ -13,10 +13,10 @@ int main(int argc, char **argv)
 {
 	int sum, i, j;
 
-	if (argc < 3)
+	if (argc < 2)
 	{
-		printf("Error\n");
-		return (1);
+		printf("0\n");
+		return (0);
 	}
 
 	sum = 0;
