@@ -41,8 +41,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	res = strdup(s1);
 
-	res[strlen(s1)] = '';
-
 	for (i = 0; i < n; i++)
 	{
 		res[strlen(s1) + i] = s2[i];
