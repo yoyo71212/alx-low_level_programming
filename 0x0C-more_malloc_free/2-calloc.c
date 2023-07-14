@@ -1,6 +1,21 @@
 #include "main.h"
 #include <stdlib.h>
 /**
+ */
+char *fill(void *ptr, int num)
+{
+	int i;
+	char *res;
+
+	res = ptr;
+
+	for (i = 0; i < num; i++)
+	{
+		res[i] = '0';
+	}
+	return (res);
+}
+/**
  * _calloc - Allocates memory for an array, using malloc
  *
  * @nmenb: Number of elements in the array
@@ -23,6 +38,8 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
+
+	fill(res, nmemb);
 
 	return (res);
 }
