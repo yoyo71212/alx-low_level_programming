@@ -6,7 +6,7 @@
  *
  * @s1: The first string
  * @s2: The second string
- * n: The number of bytes to be copied from s2
+ * @n: The number of bytes to be copied from s2
  *
  * Return: If the function fails, it should return NULL,
  * pointer shall point to a newly allocated space in memory, which contains s1,
@@ -33,7 +33,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 
 	res = malloc(sizeof(char) * (strlen(s1) + n + 1));
-	
+
 	if (res == NULL)
 	{
 		return (NULL);
