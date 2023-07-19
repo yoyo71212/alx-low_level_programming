@@ -14,8 +14,7 @@ int main(int ac, char **av)
 
 	if (ac != 4)
 	{
-		printf("Error\n");
-		exit(98);
+		printf("Error\n"), exit(98);
 	}
 
 	a = atoi(av[1]), b = atoi(av[3]);
@@ -23,14 +22,12 @@ int main(int ac, char **av)
 
 	if (!op)
 	{
-		printf("Error\n");
-		exit(99);
+		printf("Error\n"), exit(99);
 	}
 
 	if ((av[2][0] == '/' || av[2][0] == '%') && b == 0)
 	{
-		printf("Error\n");
-		exit(100);
+		printf("Error\n"), exit(100);
 	}
 
 	printf("%d\n", op(a, b));
