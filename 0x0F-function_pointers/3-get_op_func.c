@@ -21,7 +21,7 @@ int (*get_op_func(char *s))(int, int)
 	};
 	int i;
 
-	for (i = 0; i < 6; i++)
+	for (i = 0; i < 5; i++)
 	{
 		if (s && s[0] == ops[i].op[0] && !s[1])
 		{
