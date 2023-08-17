@@ -6,19 +6,8 @@
  */
 int get_endianness(void)
 {
-	/**
-	 * union check - Checks endianness
-	 *
-	 * @i: Integer to check endianness
-	 * @c: Array for comparison
-	 */
-	union check
-	{
-		unsigned int i;
-		unsigned char c[sizeof(unsigned int)];
-	} check;
+	unsigned int i;
 
-	check.i = 1;
-
-	return (check.c[0] == 1);
+	i = 1;
+	return (*(char *)&i == 1);
 }
