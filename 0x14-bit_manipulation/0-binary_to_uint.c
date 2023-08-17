@@ -72,7 +72,7 @@ unsigned int binary_to_uint(const char *b)
 		}
 		else
 		{
-			return (2);
+			return (0);
 		}
 	}
 
