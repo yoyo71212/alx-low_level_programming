@@ -55,7 +55,7 @@ unsigned int binary_to_uint(const char *b)
 	int len, i, power;
 	unsigned int res;
 
-	if (_strlen(b) - 1 < 0)
+	if (!b)
 	{
 		return (0);
 	}
@@ -72,7 +72,7 @@ unsigned int binary_to_uint(const char *b)
 		}
 		else
 		{
-			return (0);
+			return (2);
 		}
 	}
 
