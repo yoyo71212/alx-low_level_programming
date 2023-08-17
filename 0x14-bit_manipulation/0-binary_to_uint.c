@@ -2,6 +2,11 @@
 #include <string.h>
 #include <stdlib.h>
 /**
+ * pow2 - Returns 2 power num
+ *
+ * @num: The number
+ *
+ * Return: 2 power num
  */
 int pow2(int num)
 {
@@ -18,6 +23,13 @@ int pow2(int num)
 }
 
 /**
+ * binary_to_uint - Converts a binary number to an unsigned int
+ *
+ * @b: The binary number
+ *
+ * Return: The converted number,
+ * or 0 if b is NULL or there is one or more chars in the string b
+ * that is not 0 or 1
  */
 unsigned int binary_to_uint(const char *b)
 {
