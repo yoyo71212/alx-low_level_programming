@@ -1,6 +1,25 @@
 #include "main.h"
-#include <string.h>
 #include <stdlib.h>
+/**
+ * _strlen - Returns length of a string
+ *
+ * @b: The string
+ *
+ * Return: The length of string b
+ */
+int _strlen(char *b)
+{
+	int res;
+
+	res = 0;
+	while (b)
+	{
+		b++;
+		res++;
+	}
+
+	return (res);
+
 /**
  * pow2 - Returns 2 power num
  *
@@ -41,7 +60,7 @@ unsigned int binary_to_uint(const char *b)
 		return (0);
 	}
 
-	len = strlen(b) - 1;
+	len = _strlen(b) - 1;
 	power = 0;
 	res = 0;
 	for (i = len; i >= 0; i--)
