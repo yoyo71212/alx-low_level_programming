@@ -7,18 +7,19 @@
  *
  * Return: The length of string b
  */
-int _strlen(char *b)
+int _strlen(const char *b)
 {
 	int res;
 
 	res = 0;
-	while (b)
+	while (*b)
 	{
 		b++;
 		res++;
 	}
 
 	return (res);
+}
 
 /**
  * pow2 - Returns 2 power num
