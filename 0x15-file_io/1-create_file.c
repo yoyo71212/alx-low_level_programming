@@ -10,6 +10,11 @@ int _strlen(char *s)
 {
 	int res;
 
+	if (!s)
+	{
+		return (0);
+	}
+
 	res = 0;
 	while (*s)
 	{
