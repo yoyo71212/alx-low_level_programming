@@ -9,9 +9,11 @@
  */
 int main(int ac, char **av)
 {
-	int src_f, dest_f;
+	int src_f, dest_f, permissions;
 	ssize_t bytes;
 	char buffer[1024 * 8];
+
+	int permissions = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 
 	src_f = 0;
 	dest_f = 0;
@@ -24,7 +26,7 @@ int main(int ac, char **av)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
 	}
-	dest_f = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 664);
+	dest_f = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, permissions);
 	if (dest_f < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
