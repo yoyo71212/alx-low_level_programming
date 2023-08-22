@@ -45,7 +45,6 @@ int main(int ac, char **av)
 	dest_f = close(dest_f);
 	if (src_f)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", src_f), exit(100);
-
 	if (dest_f)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", src_f), exit(100);
 
