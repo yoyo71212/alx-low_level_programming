@@ -13,8 +13,7 @@ int main(int ac, char **av)
 	ssize_t bytes;
 	char buffer[1024 * 8];
 
-	int permissions = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
-
+	permissions = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 	src_f = 0;
 	dest_f = 0;
 	if (ac != 3)
